@@ -17,6 +17,7 @@ OR
 | --counter  | -c  | NO |word counter, this will decide how many files will be created to scatter the data between more then one file. default 2 files |
 | --type  | -t  | NO | the file type that will be created, default is js |
 | --overwrite  | -o  | NO | Overwrite the content in the folder, this will remove everything in the folder and add new files.  |
+| --includeTypeInImport  | -tm  | NO | This will include the file type in import so instead of './xx' will be './xx.js'  |
 
 ## How to use
 for help simple execute `cla help secure`
@@ -51,7 +52,7 @@ export default [x0, ""];
 ```
 ```js
 // index.js
-import x0 from './x0.js'
+import x0 from './x0'
 let x36=x0[0X1];
 x36+=x0[0X0][0X4];
 x36+=x0[0X0][0X11];

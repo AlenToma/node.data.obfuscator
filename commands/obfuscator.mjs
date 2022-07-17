@@ -1,4 +1,4 @@
-const obfuscator = (text, toFolder, wordCounter, fileType, isJson) => {
+const obfuscator = (text, toFolder, wordCounter, fileType, isJson, includeTypeInImport) => {
   const tohex = true;
   function string_as_unicode_escape(input) {
     function pad_four(input) {
@@ -60,13 +60,13 @@ const obfuscator = (text, toFolder, wordCounter, fileType, isJson) => {
   } else {
     const one = ('0X' + (1).toString(16).toUpperCase()).slice(-4);
     const zero = ('0X' + (0).toString(16).toUpperCase()).slice(-4);
-    const files = [{ name: variable, content: `${rClass};\n export default [${variable}, ""];` }];
+    const files = [{ name: variable, content: `${rClass};\nexport default [${variable}, ""];` }];
     let i = 0;
 
     while (data.length > 0) {
       const vr = createVariable(i ^ wordCounter);
       const pvr = files[files.length - 1].name;
-      let file = { name: vr, content: `import ${pvr} from './${pvr}.${fileType}'\nlet ${vr}=${pvr}[${one}];\n` };
+      let file = { name: vr, content: `import ${pvr} from './${pvr}${(includeTypeInImport ? ("." + fileType) : "")}'\nlet ${vr}=${pvr}[${one}];\n` };
       for (let m = 0; m <= wordCounter; m++) {
         if (data.length == 0)
           break;

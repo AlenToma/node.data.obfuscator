@@ -1,6 +1,6 @@
 {
   "name": "node.data.obfuscator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This library is build so that you could secure json or string data in js files. The library will shuffle the data in memory and make it unreadable for the naked eye.",
   "main": "index.mjs",
   "type": "module",

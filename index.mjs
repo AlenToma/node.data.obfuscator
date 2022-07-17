@@ -9,6 +9,7 @@ program
     .option('-p, --path <path>', "path of the folder that will containe the obfuscated files")
     .option('-c, --counter <counter>', "word counter, this will decide how many files will be created to scatter the data between more then one file. default 2 files")
     .option('-t, --type <type>', "the file type that will be created, default is js")
+    .option('-tm, --includeTypeInImport', "This will include the file type in import so instead of './xx' will be './xx.js'")
     .option('-o, --overwrite', "Overwrite the content in the folder, this will remove everything in the folder and add new files")
     .action(Obfuscate);
     program.parse();

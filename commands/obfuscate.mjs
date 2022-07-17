@@ -5,13 +5,12 @@ import obfuscator from './obfuscator.mjs'
 //const conf = new iconf();
 import chalk from 'chalk';
 
-function shuffle({ file, counter, path, type, overwrite }) {
+function shuffle({ file, counter, path, type, overwrite, includeTypeInImport }) {
     try {
         if (!path || path.length <= 1) {
             console.log(
                 chalk.red.bold(`"${path}" is invalid`)
             );
-
             return;
         }
         if (!fs.existsSync(path))
@@ -32,7 +31,7 @@ function shuffle({ file, counter, path, type, overwrite }) {
 
 
 
-        const files = obfuscator(text, true, counter, type, isJson());
+        const files = obfuscator(text, true, counter, type, isJson(), includeTypeInImport);
         const folderContent = fs.readdirSync(path);
         if (folderContent.length > 0) {
             if (!overwrite) {
