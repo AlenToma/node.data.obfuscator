@@ -21,6 +21,8 @@
     "web",
     "node.data.obfuscator"
   ],
+  "homepage": "https://github.com/AlenToma/node.data.obfuscator#readme",
+  "url": "https://github.com/AlenToma/node.data.obfuscator/issues",
   "author": "Alen Toma",
   "license": "MIT",
   "dependencies": {
