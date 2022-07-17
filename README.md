@@ -1,10 +1,12 @@
 # node.data.obfuscator
  This library is build so that you could secure json or string data in js files. The library will shuffle the data in memory and make it unreadable for the naked eye.
  
+ ## Platforms
+ This library will work with any platforms react, react-native and web.
  
 ## Installation
 `npm i -D node.data.obfuscator` 
-
+OR
 `npm i node.data.obfuscator -g`
 
 ## Command options for [secure]
@@ -34,7 +36,7 @@ The library will know if the file content is a json or simple string and return 
 
 The command above will create a folder with name 'data' that will containe the following files 
 
-![image](https://raw.githubusercontent.com/AlenToma/node.data.obfuscator/main/images/Capture.PNG?token=GHSAT0AAAAAABWS3ZHLFARJUOX2ZNFE7BLIYWTRYSQ)
+![image](https://github.com/AlenToma/node.data.obfuscator/blob/main/images/Capture.PNG?raw=true)
 
 To make it create less files simple remove or increase `--counter`
 
